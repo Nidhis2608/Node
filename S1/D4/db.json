@@ -1,0 +1,20 @@
+{
+    "cities": {
+        "pune": "20",
+        "haryana": "28",
+        "bangalore": "18",
+        "gurugram": "30",
+        "ghaziabad": "18",
+        "delhi": "20"
+    },
+    "users": [
+        {
+            "id": 2,
+            "name": "Nidhi"
+        },
+        {
+            "id": 3,
+            "name": "Rahul"
+        }
+    ]
+}
