@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Socket</title>
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h2>Learning Socket</h2>
+    <input type="text" placeholder="Enter your text.." id="textbox">
+    <button onclick="sendMessage()">Send</button>
+</body>
+</html>
+<script>
+    const socket=io("http://localhost:8080",{transports:["websocket"]})
+    // socket.on("grettings",(msg)=>{
+    //     console.log(msg)
+    // })
+    // socket.emit("message","Hello from client side")
+
+
+    socket.on("grettings",(msg)=>{
+        console.log(msg)
+    })
+    const sendMessage=()=>{
+        let text=document.getElementById("textbox").value
+        socket.emit("message",text)
+    }
+</script>
